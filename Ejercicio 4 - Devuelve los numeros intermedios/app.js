@@ -1,28 +1,28 @@
 const resultado = document.getElementById('resultado');
+const boton = document.getElementById('boton');
 
-function mostrarNumeros() {
+function calcularNumerosIntermedios() {
     let valueA = document.getElementById('valor1').value;
     let valueB = document.getElementById('valor2').value;
     let resto = Math.abs(valueA - valueB);
-    console.log(resto);
     let numerosIntermedios = [];
 
-
-
-    for (let i = 0; i === resto ; i++) {
-        valueA += 1;
-        console.log(valueA);
-        numerosIntermedios.push(valueA);
+    if (valueA === valueB) {
+        resultado.textContent = "Los numeros son iguales";
+    } else {
+        for (let i = resto - 1; i !== 0; i--) {
+            if (valueA < valueB) {
+                valueA++
+                numerosIntermedios.push(valueA);
+            } else {
+                valueB++
+                numerosIntermedios.push(valueB);
+            }
+        }
+        resultado.textContent = `Resultado: ${numerosIntermedios.join(', ')}.`;
     }
-
-    console.log(numerosIntermedios);
-    resultado.textContent = numerosIntermedios.sort();
 }
 
-
-
-
-const boton = document.getElementById('boton');
-boton.addEventListener('click', mostrarNumeros);
+boton.addEventListener('click', calcularNumerosIntermedios);
 
 
