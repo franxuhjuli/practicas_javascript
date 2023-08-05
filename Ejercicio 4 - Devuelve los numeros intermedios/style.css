@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-    height: 80%;
+    min-height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -27,20 +27,24 @@ body {
     width: 45%;
     background-color: rgb(112, 23, 52);
     border-radius: 1em;
-padding: 1em;
+    padding: 1em;
 }
 
 h1 {
-    font-size: 2em;
-    height: auto;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.title {
     text-align: center;
 }
+
 
 input {
     font-size: 2em;
     padding: 0.2em 1em;
     height: auto;
-    width: 80%; 
+    width: 80%;
     border-radius: 1em;
 }
 
@@ -57,10 +61,11 @@ button {
 button:hover {
     background-color: rgb(18, 161, 114);
     cursor: pointer;
-  
+
 }
 
 .resultado {
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
+    width: 90%;
 }
